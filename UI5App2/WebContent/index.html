@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+			var oSpidy =  new sap.ui.commons.Button("joker", {text:"click me"});
+			oSpidy.attachPress(function(){
+			oUser.setValue("spiderman");
+			console.log(oPass.getValue());
+			});
+			//oSpidy.placeAt("content");
+			
+			var oLabelUser = new sap.ui.commons.Label("user",{text:"username"});
+			//oLabelUser.placeAt("label1");
+			
+			var oLabelPass = new sap.ui.commons.Label("pass", {text:"password"});
+			//oLabelPass.placeAt("label2");
+			
+			var oUser = new sap.ui.commons.TextField("userinp");
+			//oUser.placeAt("input1");
+			
+			var oPass = new sap.ui.commons.PasswordField("passinp");
+			//oPass.placeAt("input2");
+			
+			var oLayout = new sap.ui.commons.layout.MatrixLayout("max",{
+				width:"30%",
+				widths:["50%","50%"]
+			});
+			
+			oLayout.createRow(oLabelUser,oUser);
+			oLayout.createRow(oLabelPass,oPass);
+			oLayout.createRow(oSpidy);
+			
+			oLayout.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		
+		<div id="label1"></div>
+		<div id="input1"></div>
+		<div id="label2"></div>
+		<div id="input2"></div>
+		<div id="content"></div> 
+	</body>
+</html>
