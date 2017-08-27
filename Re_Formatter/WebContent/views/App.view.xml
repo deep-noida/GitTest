@@ -1,8 +1,8 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-		controllerName="re_formatter.XMLFormatter" xmlns:html="http://www.w3.org/1999/xhtml">
+		controllerName="deep.controllers.App" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Title">
 		<content>
-	
+			<App id="idApp"></App>
 		</content>
 	</Page>
 </core:View>

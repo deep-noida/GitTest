@@ -7,16 +7,28 @@
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
 				data-sap-ui-libs="sap.m"
-				data-sap-ui-theme="sap_bluecrystal">
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{
+				"deep":"./"
+				}'>
 		</script>
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 
 		<script>
-				sap.ui.localResources("re_formatter");
-				var app = new sap.m.App({initialPage:"idXMLFormatter1"});
-				var page = sap.ui.view({id:"idXMLFormatter1", viewName:"re_formatter.XMLFormatter", type:sap.ui.core.mvc.ViewType.XML});
-				app.addPage(page);
-				app.placeAt("content");
+// 				sap.ui.localResources("re_formatter");
+// 				var app = new sap.m.App({initialPage:"idXMLFormatter1"});
+// 				var page = sap.ui.view({id:"idXMLFormatter1", viewName:"re_formatter.XMLFormatter", type:sap.ui.core.mvc.ViewType.XML});
+// 				app.addPage(page);
+// 				app.placeAt("content");
+
+				var oShell = new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						name: "deep"
+					})
+				});
+				
+				oShell.placeAt("content");
 		</script>
 
 	</head>

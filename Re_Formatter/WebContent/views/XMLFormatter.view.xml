@@ -1,0 +1,11 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="deep.controllers.XMLFormatter" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Custom Formatter">
+		<content>
+			<Input 	value="lala"
+					
+					valueLiveUpdate="true"></Input>
+			<Text text="mama"></Text>
+		</content>
+	</Page>
+</core:View>
